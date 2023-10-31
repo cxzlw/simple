@@ -88,7 +88,7 @@ def main():
         for period in periods:
             days[day].append((period[0], period[day + 1],))
 
-    day_of_week = datetime.datetime.now().weekday()
+    day_of_week = datetime.datetime.now().weekday()     # 0 for monday
     periods_of_day = days[day_of_week]
 
     periods_of_day_dict = {}
@@ -142,7 +142,7 @@ def main():
         print(
             f"{colors.GREEN}{teacher_and_profile[0]} is at classroom {get_classroom(periods_of_day_dict[now_period])} now.{colors.RESTORE}")
     else:
-        print(f"{colors.RED}We don't know where {teacher_and_profile[0]} is now.{colors.RESTORE}")
+        print(f"{colors.RED}We don't know where {teacher_and_profile[0]} is  now.{colors.RESTORE}")
 
     print()
     print(f"{colors.CYAN}{teacher_and_profile[0]} will be these classrooms today:{colors.RESTORE}")
